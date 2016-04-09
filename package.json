@@ -1,0 +1,19 @@
+{
+  "name": "line-bot-echo",
+  "version": "0.1.0",
+  "description": "Echo bot for LINE",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "tmtk75",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "morgan": "^1.6.1",
+    "node-fetch": "^1.5.0"
+  }
+}
