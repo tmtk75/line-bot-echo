@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
 
-app.post('/', (req, res) => {
-  //console.log(req.body);
-  var app_id  = process.env.KII_APP_ID;
-  var app_key = process.env.KII_APP_KEY;
+app.post('/:app_id/:app_key', (req, res) => {
+  var app_id  = req.params.app_id;
+  var app_key = req.params.app_key;
+  console.log(app_id, app_key);
   fetch('https://api-jp.kii.com/api/apps/' + app_id + "/server-code/versions/current/main", {
     method: 'POST',
     headers: {
